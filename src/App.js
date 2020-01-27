@@ -1,16 +1,23 @@
-import React from 'react';
-import './App.scss';
+import React from 'react'
+import { Row, Col } from 'antd'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
-  );
+import Home from './pages/home'
+import { Header, Footer, Nav } from './components'
+
+import './style/common.less'
+
+export default class Admin extends React.Component {
+
+  render() {
+    return(
+      <Row className="container">
+        <Col span={4} className="nav-left"><Nav /></Col>
+        <Col span={20} className="main">
+          <Header />
+          <Home />
+          <Footer />
+        </Col>
+      </Row>
+    )
+  }
 }
-
-export default App;
