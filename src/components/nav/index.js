@@ -58,7 +58,7 @@ export default class Nav extends React.Component {
       <section>
         <div className="logo">
           <img src="/logo192.png" alt="" />
-          <h1>Jijmin CMS</h1>
+          <h1>果汁 CMS</h1>
         </div>
         <Menu
           mode="inline"
