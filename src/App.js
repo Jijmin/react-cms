@@ -1,26 +1,9 @@
-import React from "react";
-import { Row, Col } from "antd";
+import React, { Component } from "react";
 
-import Home from "./pages/home";
-import { Header, Footer, Nav } from "./components";
-
-import "./style/common.less";
-
-export default class Admin extends React.Component {
+class App extends Component {
   render() {
-    return (
-      <Row className="container">
-        <Col span={4} className="nav-left">
-          <Nav />
-        </Col>
-        <Col span={20} className="main">
-          <Header />
-          <Row className="content">
-            <Home />
-          </Row>
-          <Footer />
-        </Col>
-      </Row>
-    );
+    return <div>{this.props.children}</div>;
   }
 }
+
+export default App;

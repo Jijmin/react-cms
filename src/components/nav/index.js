@@ -1,58 +1,66 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import MenuConfig from '../../config/menuConfig'
-import './index.less'
+import MenuConfig from "../../config/menuConfig";
+import "./index.less";
 
-import { Menu, Icon } from 'antd'
-const { SubMenu } = Menu
+import { Menu, Icon } from "antd";
+const { SubMenu } = Menu;
 
 export default class Nav extends React.Component {
   rootSubmenuKeys = MenuConfig.map(item => {
-    return item.key
-  })
+    return item.key;
+  });
   state = {
-    openKeys: ['/home'],
+    openKeys: ["/home"],
     menuTreeNode: null
-  }
+  };
   UNSAFE_componentWillMount() {
     this.setState({
       menuTreeNode: this.renderMenu(MenuConfig)
-    })
+    });
   }
   // 手风琴菜单
   onOpenChange = openKeys => {
-    const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
+    const latestOpenKey = openKeys.find(
+      key => this.state.openKeys.indexOf(key) === -1
+    );
     if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
       this.setState({ openKeys });
     } else {
       this.setState({
-        openKeys: latestOpenKey ? [latestOpenKey] : [],
+        openKeys: latestOpenKey ? [latestOpenKey] : []
       });
     }
-  }
+  };
   // 菜单渲染
-  renderMenu = (data) => {
-    return data.map((item) => {
+  renderMenu = data => {
+    return data.map(item => {
       if (item.children) {
         return (
-          <SubMenu title={
-            <span>
-              <Icon type={item.icon} />
-              <span>{item.title}</span>
-            </span>
-          } key={item.key}>
+          <SubMenu
+            title={
+              <span>
+                <Icon type={item.icon} />
+                <span>{item.title}</span>
+              </span>
+            }
+            key={item.key}
+          >
             {this.renderMenu(item.children)}
           </SubMenu>
-        )
+        );
       }
-      return <Menu.Item title={item.title} key={item.key}>
-        <span>
-          {item.icon && <Icon type={item.icon} />}
-          <span>{item.title}</span>
-        </span>
-      </Menu.Item>
-    })
-  }
+      return (
+        <Menu.Item title={item.title} key={item.key}>
+          <NavLink to={item.key}>
+            {item.icon && <Icon type={item.icon} />}
+            <span>{item.title}</span>
+          </NavLink>
+        </Menu.Item>
+      );
+    });
+  };
   render() {
     return (
       <section>
