@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "antd";
-import "./ui.less";
 
 export default class Bases extends React.Component {
   state = {};

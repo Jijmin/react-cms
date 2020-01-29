@@ -14,6 +14,7 @@ import Messages from "./pages/ui/messages";
 import Tabs from "./pages/ui/tabs";
 import Gallery from "./pages/ui/gallery";
 import Carousel from "./pages/ui/carousel";
+import FormLogin from "./pages/form/login";
 
 export default class ERouter extends React.Component {
   render() {
@@ -36,6 +37,7 @@ export default class ERouter extends React.Component {
                     <Route path="/ui/tabs" component={Tabs} />
                     <Route path="/ui/gallery" component={Gallery} />
                     <Route path="/ui/carousel" component={Carousel} />
+                    <Route path="/form/login" component={FormLogin} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>
