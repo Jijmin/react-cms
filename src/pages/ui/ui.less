@@ -1,12 +1,20 @@
+@import "../../style/default.less";
 .card-wrap {
-  margin-bottom: 10px;
-  button {
-    margin-right: 10px;
+  .mb10();
+  button, .ant-spin {
+    .mr10();
+  }
+  .loading{
+    font-size: @fontB;
+  }
+  .ant-alert{
+    .mb10();
   }
 }
 .grey-bg {
   background: rgb(190, 200, 200);
 }
+
 /* modals */
 /* use css to set position of modal */
 .vertical-center-modal {
