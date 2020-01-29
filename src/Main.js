@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col } from "antd";
 
-import Home from "./pages/home";
 import { Header, Footer, Nav } from "./components";
 
 import "./style/common.less";

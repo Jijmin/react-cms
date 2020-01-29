@@ -7,6 +7,7 @@ import NoMatch from "./pages/nomatch";
 import Login from "./pages/login";
 import Home from "./pages/home";
 import Buttons from "./pages/ui/buttons";
+import Modals from "./pages/ui/modals";
 
 export default class ERouter extends React.Component {
   render() {
@@ -22,6 +23,7 @@ export default class ERouter extends React.Component {
                   <Switch>
                     <Route path="/home" component={Home} />
                     <Route path="/ui/buttons" component={Buttons} />
+                    <Route path="/ui/modals" component={Modals} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>
