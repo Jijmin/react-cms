@@ -54,36 +54,36 @@ export default class Modals extends React.Component {
         </Card>
 
         <Modal
-          title="React"
+          title="静夜思"
           visible={this.state.showModal1}
           onCancel={() => this.setState({ showModal1: false })}
         >
-          <p>欢迎学习慕课新推出的React高级课程</p>
+          <p>床前明月光</p>
         </Modal>
         <Modal
-          title="React"
+          title="静夜思"
           visible={this.state.showModal2}
           okText="好的"
           cancelText="算了"
           onCancel={() => this.setState({ showModal2: false })}
         >
-          <p>欢迎学习慕课新推出的React高级课程</p>
+          <p>疑是地上霜</p>
         </Modal>
         <Modal
-          title="React"
+          title="静夜思"
           style={{ top: 20 }}
           visible={this.state.showModal3}
           onCancel={() => this.setState({ showModal3: false })}
         >
-          <p>欢迎学习慕课新推出的React高级课程</p>
+          <p>举头望明月</p>
         </Modal>
         <Modal
-          title="React"
+          title="静夜思"
           wrapClassName="vertical-center-modal"
           visible={this.state.showModal4}
           onCancel={() => this.setState({ showModal4: false })}
         >
-          <p>欢迎学习慕课新推出的React高级课程</p>
+          <p>低头思故乡</p>
         </Modal>
       </div>
     );

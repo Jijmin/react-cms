@@ -9,6 +9,7 @@ import Home from "./pages/home";
 import Buttons from "./pages/ui/buttons";
 import Modals from "./pages/ui/modals";
 import Loadings from "./pages/ui/loadings";
+import Notifications from "./pages/ui/notifications";
 
 export default class ERouter extends React.Component {
   render() {
@@ -26,6 +27,7 @@ export default class ERouter extends React.Component {
                     <Route path="/ui/buttons" component={Buttons} />
                     <Route path="/ui/modals" component={Modals} />
                     <Route path="/ui/loadings" component={Loadings} />
+                    <Route path="/ui/notifications" component={Notifications} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>
