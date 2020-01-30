@@ -36,7 +36,6 @@ export default class City extends React.Component {
   // 城市开通提交
   handleSubmit = () => {
     let cityInfo = this.cityForm.props.form.getFieldsValue();
-    console.log(cityInfo);
     axios.ajax("/city/open", { cityInfo });
     message.success("开通成功");
     this.setState({ isShowOpenCity: false });

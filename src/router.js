@@ -20,6 +20,7 @@ import TableBasic from "./pages/table/basic";
 import TableHigh from "./pages/table/high";
 import Rich from './pages/rich'
 import City from './pages/city'
+import Order from './pages/order'
 
 export default class ERouter extends React.Component {
   render() {
@@ -48,6 +49,7 @@ export default class ERouter extends React.Component {
                     <Route path="/table/high" component={TableHigh} />
                     <Route path="/rich" component={Rich} />
                     <Route path="/city" component={City} />
+                    <Route path="/order" component={Order} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>
