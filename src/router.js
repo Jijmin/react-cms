@@ -18,6 +18,7 @@ import FormLogin from "./pages/form/login";
 import FormRegister from "./pages/form/register";
 import TableBasic from "./pages/table/basic";
 import TableHigh from "./pages/table/high";
+import Rich from './pages/rich'
 
 export default class ERouter extends React.Component {
   render() {
@@ -44,6 +45,7 @@ export default class ERouter extends React.Component {
                     <Route path="/form/register" component={FormRegister} />
                     <Route path="/table/basic" component={TableBasic} />
                     <Route path="/table/high" component={TableHigh} />
+                    <Route path="/rich" component={Rich} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>
