@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Table, Modal, Button, message } from "antd";
 import axios from "../../axios/index";
 import Utils from "../../utils/utils";
-import { INTEREST, INIT_ROWS, CLOS_DATA } from "../../config/tableConfig";
+import { INTEREST, INIT_ROWS, CLOS_DATA } from "./config";
 
 export default class Bases extends React.Component {
   state = {

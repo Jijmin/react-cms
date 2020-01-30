@@ -1,4 +1,4 @@
-import Utils from "../utils/utils";
+import Utils from "../../utils/utils";
 export const INTEREST = {
   "1": "游泳",
   "2": "打篮球",

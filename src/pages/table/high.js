@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Table, Modal, Button, message, Badge } from "antd";
 import axios from "../../axios/index";
-import { CLOS_DATA, CLOS_DATA2 } from "../../config/tableConfig";
+import { CLOS_DATA, CLOS_DATA2 } from "./config";
 export default class HighTable extends React.Component {
   state = {};
   params = {
