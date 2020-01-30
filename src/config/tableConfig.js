@@ -1,3 +1,4 @@
+import Utils from "../utils/utils";
 export const INTEREST = {
   "1": "游泳",
   "2": "打篮球",
@@ -47,54 +48,107 @@ export const INIT_ROWS = [
     time: "09:00"
   }
 ];
-export const CLOS_DATA = [
-  {
-    title: "id",
-    key: "id",
-    dataIndex: "id"
-  },
-  {
-    title: "用户名",
-    key: "userName",
-    dataIndex: "userName"
-  },
-  {
-    title: "性别",
-    key: "sex",
-    dataIndex: "sex",
-    render(sex) {
-      return sex === 1 ? "男" : "女";
-    }
-  },
-  {
-    title: "状态",
-    key: "state",
-    dataIndex: "state",
-    render(state) {
-      return STATE[state];
-    }
-  },
-  {
-    title: "爱好",
-    key: "interest",
-    dataIndex: "interest",
-    render(interest) {
-      return INTEREST[interest];
-    }
-  },
-  {
-    title: "生日",
-    key: "birthday",
-    dataIndex: "birthday"
-  },
-  {
-    title: "地址",
-    key: "address",
-    dataIndex: "address"
-  },
-  {
-    title: "早起时间",
-    key: "time",
-    dataIndex: "time"
+export const ID_VAL = {
+  title: "id",
+  key: "id",
+  width: 100,
+  fixed: "left",
+  dataIndex: "id"
+};
+export const USERNAME_VAL = {
+  title: "用户名",
+  key: "userName",
+  width: 100,
+  fixed: "left",
+  dataIndex: "userName"
+};
+export const SEX_VAL = {
+  title: "性别",
+  key: "sex",
+  width: 100,
+  dataIndex: "sex",
+  render(sex) {
+    return sex === 1 ? "男" : "女";
   }
+};
+export const STATE_VAL = {
+  title: "状态",
+  key: "state",
+  width: 100,
+  dataIndex: "state",
+  render(state) {
+    return STATE[state];
+  }
+};
+export const INTEREST_VAL = {
+  title: "爱好",
+  key: "interest",
+  width: 140,
+  dataIndex: "interest",
+  render(abc) {
+    return INTEREST[abc];
+  }
+};
+export const BIRTH_VAL = {
+  title: "生日",
+  key: "birthday",
+  width: 140,
+  dataIndex: "birthday"
+};
+export const ADDR_VAL = {
+  title: "地址",
+  key: "address",
+  width: 200,
+  dataIndex: "address"
+};
+export const TIME_VAL = {
+  title: "早起时间",
+  key: "time",
+  width: 140,
+  dataIndex: "time"
+};
+export const CLOS_DATA = [
+  ID_VAL,
+  USERNAME_VAL,
+  SEX_VAL,
+  STATE_VAL,
+  INTEREST_VAL,
+  BIRTH_VAL,
+  ADDR_VAL,
+  TIME_VAL
+];
+const birthdayKey = () => {
+  return {
+    title: "生日",
+    key: Utils.generateUUID(),
+    width: 120,
+    dataIndex: "birthday"
+  }
+};
+
+export const CLOS_DATA2 = [
+  Object.assign({ fixed: "left" }, ID_VAL),
+  Object.assign({ fixed: "left" }, USERNAME_VAL),
+  SEX_VAL,
+  STATE_VAL,
+  INTEREST_VAL,
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  birthdayKey(),
+  Object.assign({ fixed: "right" }, ADDR_VAL),
+  Object.assign({ fixed: "right" }, TIME_VAL)
 ];

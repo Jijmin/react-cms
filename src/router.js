@@ -16,7 +16,8 @@ import Gallery from "./pages/ui/gallery";
 import Carousel from "./pages/ui/carousel";
 import FormLogin from "./pages/form/login";
 import FormRegister from "./pages/form/register";
-import Basic from "./pages/table/basic";
+import TableBasic from "./pages/table/basic";
+import TableHigh from "./pages/table/high";
 
 export default class ERouter extends React.Component {
   render() {
@@ -41,7 +42,8 @@ export default class ERouter extends React.Component {
                     <Route path="/ui/carousel" component={Carousel} />
                     <Route path="/form/login" component={FormLogin} />
                     <Route path="/form/register" component={FormRegister} />
-                    <Route path="/table/basic" component={Basic} />
+                    <Route path="/table/basic" component={TableBasic} />
+                    <Route path="/table/high" component={TableHigh} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>

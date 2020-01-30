@@ -16,22 +16,22 @@ export default class Axios {
         })
     }
 
-    static ajax(options){
+    static ajax(url, params, isShowLoading){
         let loading;
-        if (options.data && options.data.isShowLoading !== false){
+        if (isShowLoading !== false){
             loading = document.getElementById('ajaxLoading');
             loading.style.display = 'block';
         }
         let baseApi = 'https://www.easy-mock.com/mock/5e3188ae9de97e2947886cdd/crm';
         return new Promise((resolve,reject)=>{
             axios({
-                url:options.url,
+                url,
                 method:'get',
                 baseURL:baseApi,
                 timeout:5000,
-                params: (options.data && options.data.params) || ''
+                params: params || ''
             }).then((response)=>{
-                if (options.data && options.data.isShowLoading !== false) {
+                if (isShowLoading !== false) {
                     loading = document.getElementById('ajaxLoading');
                     loading.style.display = 'none';
                 }

@@ -18,29 +18,19 @@ export default class Bases extends React.Component {
 
     this.request();
   }
-  request = () => {
+  request = async () => {
     let _this = this;
-    axios
-      .ajax({
-        url: "/table/list",
-        data: {
-          params: {
-            page: this.params.page
-          }
-        }
+    const res = await axios.ajax("/table/list", { page: this.params.page });
+    res.list.map((item, index) => (item.key = index));
+    this.setState({
+      dataSource2: res.list,
+      selectedRowKeys: [],
+      selectedRows: null,
+      pagination: Utils.pagination(res, current => {
+        _this.params.page = current;
+        this.request();
       })
-      .then(res => {
-        res.list.map((item, index) => (item.key = index));
-        this.setState({
-          dataSource2: res.list,
-          selectedRowKeys: [],
-          selectedRows: null,
-          pagination: Utils.pagination(res, current => {
-            _this.params.page = current;
-            this.request();
-          })
-        });
-      });
+    });
   };
   onRowClick = (record, index) => {
     let selectKey = [index];
