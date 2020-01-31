@@ -25,6 +25,10 @@ import Order from "./pages/order";
 import OrderDetail from "./pages/order/detail";
 import User from "./pages/user";
 import BikeMap from "./pages/map/bikeMap";
+import ChartsBar from "./pages/charts/bar";
+import ChartsLine from "./pages/charts/line";
+import ChartsPie from "./pages/charts/pie";
+import Permission from "./pages/permission";
 
 export default class ERouter extends React.Component {
   render() {
@@ -53,7 +57,7 @@ export default class ERouter extends React.Component {
                     <Route path="/ui/buttons" component={Buttons} />
                     <Route path="/ui/modals" component={Modals} />
                     <Route path="/ui/loadings" component={Loadings} />
-                    <Route path="/ui/notifications" component={Notifications} />
+                    <Route path="/ui/notification" component={Notifications} />
                     <Route path="/ui/messages" component={Messages} />
                     <Route path="/ui/tabs" component={Tabs} />
                     <Route path="/ui/gallery" component={Gallery} />
@@ -67,6 +71,10 @@ export default class ERouter extends React.Component {
                     <Route path="/order" component={Order} />
                     <Route path="/user" component={User} />
                     <Route path="/bikeMap" component={BikeMap} />
+                    <Route path="/charts/bar" component={ChartsBar} />
+                    <Route path="/charts/pie" component={ChartsPie} />
+                    <Route path="/charts/line" component={ChartsLine} />
+                    <Route path="/Permission" component={Permission} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>

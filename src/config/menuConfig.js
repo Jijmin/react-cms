@@ -23,7 +23,7 @@ const menuList = [
             },
             {
                 title: '通知提醒',
-                key: '/ui/notifications',
+                key: '/ui/notification',
             },
             {
                 title: '全局Message',
