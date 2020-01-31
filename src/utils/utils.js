@@ -2,6 +2,11 @@ import React from "react";
 import { Select } from "antd";
 const Option = Select.Option;
 export default {
+  /**
+   * 格式化分页字段
+   * @param {Object} data 分页参数
+   * @param {Function} callback 回调函数
+   */
   pagination(data, callback) {
     return {
       onChange: current => {
@@ -16,6 +21,9 @@ export default {
       showQuickJumper: true
     };
   },
+  /**
+   * 获取uuid
+   */
   generateUUID() {
     var d = new Date().getTime();
     if (window.performance && typeof window.performance.now === "function") {
@@ -28,6 +36,10 @@ export default {
     });
     return uuid;
   },
+  /**
+   * list 转 option
+   * @param {Array} data 数据
+   */
   getOptionList(data) {
     if (!data) {
       return [];
@@ -41,5 +53,24 @@ export default {
       )
     );
     return options;
+  },
+  /**
+   * ETable 行点击通用函数
+   * @param {*选中行的索引} selectedRowKeys
+   * @param {*选中行对象} selectedItem
+   */
+  updateSelectedItem(selectedRowKeys, selectedRows, selectedIds) {
+    if (selectedIds) {
+      this.setState({
+        selectedRowKeys,
+        selectedIds: selectedIds,
+        selectedItem: selectedRows
+      });
+    } else {
+      this.setState({
+        selectedRowKeys,
+        selectedItem: selectedRows
+      });
+    }
   }
 };

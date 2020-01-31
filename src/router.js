@@ -3,6 +3,7 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 
 import App from "./App";
 import Main from "./Main";
+import Common from "./common";
 import NoMatch from "./pages/nomatch";
 import Login from "./pages/login";
 import Home from "./pages/home";
@@ -22,7 +23,8 @@ import Rich from "./pages/rich";
 import City from "./pages/city";
 import Order from "./pages/order";
 import OrderDetail from "./pages/order/detail";
-import Common from "./common";
+import User from "./pages/user";
+import BikeMap from "./pages/map/bikeMap";
 
 export default class ERouter extends React.Component {
   render() {
@@ -63,6 +65,8 @@ export default class ERouter extends React.Component {
                     <Route path="/rich" component={Rich} />
                     <Route path="/city" component={City} />
                     <Route path="/order" component={Order} />
+                    <Route path="/user" component={User} />
+                    <Route path="/bikeMap" component={BikeMap} />
                     <Route component={NoMatch} />
                   </Switch>
                 </Main>

@@ -13,7 +13,7 @@ export default class Header extends React.Component {
     setInterval(
       () =>
         this.setState({
-          sysTime: moment().format("YYYY-MM-DD hh:mm:ss")
+          sysTime: moment().format("YYYY-MM-DD HH:mm:ss")
         }),
       1000
     );

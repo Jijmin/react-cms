@@ -3,7 +3,7 @@ import { Card } from "antd";
 import axios from "../../axios";
 import "./detail.less";
 
-export default class Bases extends React.Component {
+export default class OrderDetail extends React.Component {
   state = {};
   componentDidMount() {
     let orderId = this.props.match.params.orderId;
