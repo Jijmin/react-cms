@@ -62,7 +62,17 @@ export default class Bases extends React.Component {
   };
 
   render() {
-    const columns = CLOS_DATA;
+    const age_val = {
+      title: "年龄",
+      key: "age",
+      dataIndex: "age",
+      sorter: (a, b) => {
+        return a.age - b.age;
+      },
+      sortOrder: this.state.sortOrder
+    };
+    let columns = CLOS_DATA.concat();
+    columns.splice(2, 0, age_val);
     const selectedRowKeys = this.state.selectedRowKeys;
     const rowSelection = {
       type: "radio",

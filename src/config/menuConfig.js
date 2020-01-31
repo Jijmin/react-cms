@@ -109,7 +109,7 @@ const menuList = [
         icon: 'car',
     },
     {
-        title: '图标',
+        title: '图表',
         key: '/charts',
         icon: 'heart',
         children: [

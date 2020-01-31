@@ -18,9 +18,11 @@ import FormLogin from "./pages/form/login";
 import FormRegister from "./pages/form/register";
 import TableBasic from "./pages/table/basic";
 import TableHigh from "./pages/table/high";
-import Rich from './pages/rich'
-import City from './pages/city'
-import Order from './pages/order'
+import Rich from "./pages/rich";
+import City from "./pages/city";
+import Order from "./pages/order";
+import OrderDetail from "./pages/order/detail";
+import Common from "./common";
 
 export default class ERouter extends React.Component {
   render() {
@@ -29,6 +31,17 @@ export default class ERouter extends React.Component {
         <App>
           <Switch>
             <Route path="/login" component={Login} />
+            <Route
+              path="/common"
+              render={() => (
+                <Common>
+                  <Route
+                    path="/common/order/detail/:orderId"
+                    component={OrderDetail}
+                  />
+                </Common>
+              )}
+            />
             <Route
               path="/"
               render={() => (

@@ -20,6 +20,7 @@ export const INIT_ROWS = [
   {
     id: "0",
     userName: "Jack",
+    age: 20,
     sex: "1",
     state: "1",
     interest: "1",
@@ -30,6 +31,7 @@ export const INIT_ROWS = [
   {
     id: "1",
     userName: "Tom",
+    age: 23,
     sex: "1",
     state: "2",
     interest: "2",
@@ -40,6 +42,7 @@ export const INIT_ROWS = [
   {
     id: "2",
     userName: "Lily",
+    age: 26,
     sex: "1",
     state: "3",
     interest: "3",
